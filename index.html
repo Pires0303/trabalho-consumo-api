@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty - Personagens</title>
+    <link rel="stylesheet" href="script.css">
+</head>
+<body>
+    <!-- Container da Vitrine -->
+    <div id="vitrine-container">
+        <header>
+            <div class="container">
+                <h1>Personagens</h1>
+                <img src="images/RickAndMortyPNG.png" alt="">
+            </div>
+        </header>
+
+        <div class="container">
+            <div id="charactersGrid" class="characters-grid"></div>
+            <div id="pagination" class="pagination hidden"></div>
+            <div id="loading" class="loading">Carregando personagens...</div>
+            <div id="error" class="error hidden"></div>
+        </div>
+    </div>
+
+    <!-- Container de Detalhes (inicialmente escondido) -->
+    <div id="detail-container" class="hidden">
+        <header>
+            <div class="container">
+                <h1>Detalhes do Personagem</h1>
+            </div>
+        </header>
+
+        <div class="container">
+            <button onclick="showVitrine()" class="back-button">← Voltar para Vitrine</button>
+            
+            <div id="characterDetail" class="detail-container">
+                <img id="detailImage" src="" alt="Imagem do Personagem" class="detail-image">
+                
+                <div class="detail-info">
+                    <span class="detail-label">Nome:</span>
+                    <span id="detailName"></span>
+                </div>
+                
+                <div class="detail-info">
+                    <span class="detail-label">Espécie:</span>
+                    <span id="detailSpecies"></span>
+                </div>
+                
+                <div class="detail-info">
+                    <span class="detail-label">Gênero:</span>
+                    <span id="detailGender"></span>
+                </div>
+                
+                <div class="detail-info">
+                    <span class="detail-label">Mundo/Dimensão:</span>
+                    <span id="detailLocation"></span>
+                </div>
+                
+                <div class="detail-info">
+                    <span class="detail-label">Status:</span>
+                    <span id="detailStatus" class="character-status"></span>
+                </div>
+            </div>
+
+            <div id="detailLoading" class="loading">Carregando detalhes...</div>
+            <div id="detailError" class="error hidden"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
